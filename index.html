@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A community-maintained gallery of good first issues across Bitcoin open-source projects.">
+  <title>SatsIssues — Bitcoin Good First Issues</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title">SatsIssues</h1>
+        <p class="site-subtitle">A community-maintained gallery of good first issues across Bitcoin open source</p>
+      </div>
+      <a
+        href="https://github.com/nkatha23/Issuesgallery"
+        class="contribute-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contribute an Issue
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-wrapper">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="search"
+            id="search"
+            class="search-input"
+            placeholder="Search issues, orgs, or tags..."
+            aria-label="Search issues"
+          >
+        </div>
+        <select id="language-filter" class="filter-select" aria-label="Filter by language">
+          <option value="">All Languages</option>
+        </select>
+        <select id="org-filter" class="filter-select" aria-label="Filter by organisation">
+          <option value="">All Orgs</option>
+        </select>
+      </div>
+
+      <div class="results-bar">
+        <span id="results-count" class="results-count" aria-live="polite"></span>
+        <button id="clear-filters" class="clear-btn hidden" type="button">Clear filters</button>
+      </div>
+
+      <div id="card-grid" class="card-grid" role="list"></div>
+
+      <div id="empty-state" class="empty-state hidden" role="status">
+        <p class="empty-title">No issues match your search.</p>
+        <p class="empty-hint">Try adjusting your filters or <a href="#" id="reset-link">clear all filters</a>.</p>
+      </div>
+
+      <div id="loading-state" class="loading-state" role="status" aria-label="Loading issues">
+        <div class="spinner"></div>
+        <p>Loading issues...</p>
+      </div>
+
+      <div id="error-state" class="error-state hidden" role="alert">
+        <p id="error-message"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Data is community-maintained via pull request.
+        <a href="https://github.com/nkatha23/Issuesgallery#contributing" target="_blank" rel="noopener noreferrer">
+          Learn how to contribute.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
