@@ -3,7 +3,9 @@
 A static, community-maintained directory of Bitcoin open-source organizations.
 Filterable by type — powered entirely by a JSON file anyone can PR into.
 
-**Live site:** [nkatha23.github.io/Issuesgallery](https://nkatha23.github.io/Issuesgallery)
+**Live site:** [nkatha23.github.io/Anzagallery](https://nkatha23.github.io/Anzagallery/)
+
+Anzagallery is open source — contributions are welcome.
 
 ---
 
@@ -13,9 +15,9 @@ The only file you need to edit is `data/orgs.json`.
 
 ### Step-by-step
 
-1. **Fork** this repository.
+1. **Fork** this repository on [GitHub](https://github.com/nkatha23/Anzagallery).
 2. Open `data/orgs.json`.
-3. Add your entry using the template below (entries are displayed alphabetically).
+3. Add your entry using the template below (entries are displayed alphabetically by name).
 4. Commit: `git commit -m "feat: add <org name>"`
 5. Open a pull request — CI will validate your entry automatically.
 6. Once merged, the site updates within minutes.
@@ -36,26 +38,26 @@ The only file you need to edit is `data/orgs.json`.
 
 ### Field reference
 
-| Field         | Required | Notes                                                        |
-|---------------|----------|--------------------------------------------------------------|
-| `id`          | Yes      | Kebab-case, must be unique across all entries                |
-| `name`        | Yes      | Display name shown on the card                               |
-| `type`        | Yes      | One of: `Project`, `Product`, `Education`, `Design`         |
-| `description` | Yes      | One or two sentences                                         |
-| `website`     | No*      | Full URL — at least one of `website` or `github` is required |
-| `github`      | No*      | Full GitHub org or repo URL                                  |
-| `community`   | No       | Discord, Telegram, Slack, or forum link                      |
+| Field         | Required | Notes                                                         |
+|---------------|----------|---------------------------------------------------------------|
+| `id`          | Yes      | Kebab-case, must be unique across all entries                 |
+| `name`        | Yes      | Display name shown on the card                                |
+| `type`        | Yes      | One of: `Project`, `Product`, `Education`, `Design`          |
+| `description` | Yes      | One or two sentences                                          |
+| `website`     | No*      | Full URL — at least one of `website` or `github` is required  |
+| `github`      | No*      | Full GitHub org or repo URL                                   |
+| `community`   | No       | Discord, Telegram, Slack, or forum link                       |
 
 \* At least one of `website` or `github` must be present.
 
 ### Type guide
 
-| Type        | When to use                                                  |
-|-------------|--------------------------------------------------------------|
-| `Project`   | Open protocols, libraries, node implementations              |
-| `Product`   | Applications, wallets, payment processors, tools             |
-| `Education` | Courses, games, learning resources, developer programs       |
-| `Design`    | Design systems, UX research, visual resources                |
+| Type        | When to use                                             |
+|-------------|---------------------------------------------------------|
+| `Project`   | Open protocols, libraries, node implementations         |
+| `Product`   | Applications, wallets, payment processors, tools        |
+| `Education` | Courses, games, learning resources, developer programs  |
+| `Design`    | Design systems, UX research, visual resources           |
 
 ---
 
@@ -110,14 +112,6 @@ Then open **http://localhost:8000** in your browser.
 │       └── validate.yml              # GitHub Actions: validate + deploy
 └── README.md
 ```
-
----
-
-## Enabling GitHub Pages
-
-1. Go to **Settings > Pages** in your fork.
-2. Set **Source** to `GitHub Actions`.
-3. The next push to `main` will deploy the site automatically.
 
 ---
 
