@@ -1,0 +1,199 @@
+[
+  {
+    "id": "ark-labs",
+    "name": "ARK Labs",
+    "type": "Project",
+    "description": "Building Open, Programmable Finance",
+    "github": "https://github.com/ArkLabsHQ",
+    "community": ""
+  },
+  {
+    "id": "bdk",
+    "name": "BDK",
+    "type": "Project",
+    "description": "With Bitcoin Development Kit, you can seamlessly build cross platform mobile wallets",
+    "website": "https://bitcoindevkit.org",
+    "github": "https://github.com/bitcoindevkit",
+    "community": "https://discord.com/invite/dstn4dQ"
+  },
+  {
+    "id": "bitcoin-core",
+    "name": "Bitcoin Core",
+    "type": "Project",
+    "description": "Implementation of Bitcoin",
+    "website": "https://bitcoincore.org",
+    "github": "https://github.com/bitcoin/bitcoin"
+  },
+  {
+    "id": "bitcoin-knots",
+    "name": "Bitcoin Knots",
+    "type": "Project",
+    "description": "Implementation of Bitcoin",
+    "website": "https://bitcoinknots.org",
+    "github": "https://github.com/bitcoinknots",
+    "community": "https://discord.com/invite/3Ccegp9YrU"
+  },
+  {
+    "id": "bitcoin-design",
+    "name": "Bitcoin Design",
+    "type": "Design",
+    "description": "Helping make bitcoin more intuitive and accessible",
+    "website": "https://bitcoin.design",
+    "github": "https://github.com/BitcoinDesign",
+    "community": "https://discord.com/invite/K7aQ5PErht"
+  },
+  {
+    "id": "bolt12",
+    "name": "BOLT12",
+    "type": "Project",
+    "description": "BOLT 12 is a proposed upgrade to the Lightning Network",
+    "website": "https://bolt12.org",
+    "github": "https://github.com/lightning/bolts",
+    "community": "https://discord.com/invite/Ay7UMqZu4m"
+  },
+  {
+    "id": "braidpool",
+    "name": "Braidpool",
+    "type": "Product",
+    "description": "A scalable peer to peer bitcoin mining pool with support for hashrate futures",
+    "github": "https://github.com/braidpool",
+    "community": "https://discord.com/invite/pZYUDwkpPv"
+  },
+  {
+    "id": "btcpayserver",
+    "name": "BTCPay Server",
+    "type": "Product",
+    "description": "Self-hosted, open-source cryptocurrency payment processor",
+    "website": "https://contribute.btcpayserver.org",
+    "github": "https://github.com/btcpayserver",
+    "community": "https://t.me/btcpayserver"
+  },
+  {
+    "id": "btrust-builders",
+    "name": "Btrust Builders",
+    "type": "Education",
+    "description": "Empowering open-source Bitcoin builders in Africa",
+    "website": "https://www.btrust.tech",
+    "community": "https://discord.com/invite/wFt6puhmwk"
+  },
+  {
+    "id": "cln",
+    "name": "CLN",
+    "type": "Project",
+    "description": "CLN is the first Lightning implementation",
+    "website": "https://corelightning.org",
+    "github": "https://github.com/ElementsProject/lightning",
+    "community": "https://discord.gg/w27fMFESMN"
+  },
+  {
+    "id": "coinswap",
+    "name": "Coinswap",
+    "type": "Project",
+    "description": "Protocol that allows two or more users to create a set of transactions that look like independent transactions but which actually swap their coins with each other",
+    "github": "https://github.com/citadel-tech/coinswap",
+    "community": "https://discord.com/invite/Wz42hVmrrK"
+  },
+  {
+    "id": "cryobrick",
+    "name": "CryoBrick",
+    "type": "Product",
+    "description": "Air-gapped cold storage on feature phone",
+    "website": "https://www.cryobrick.com",
+    "github": "https://github.com/cryobrick",
+    "community": "https://discord.com/invite/YGCXhfkbsA"
+  },
+  {
+    "id": "fedi",
+    "name": "Fedi",
+    "type": "Product",
+    "description": "The Private Bitcoin Wallet",
+    "website": "https://www.fedi.xyz",
+    "github": "https://github.com/fedixyz/fedi",
+    "community": "https://t.me/fedibtc"
+  },
+  {
+    "id": "fedimint",
+    "name": "Fedimint",
+    "type": "Project",
+    "description": "Fedimint is the first bitcoin-backed ecash protocol",
+    "website": "https://fedimint.org",
+    "github": "https://github.com/fedimint",
+    "community": "https://discord.com/invite/Jq5dE2NhEd"
+  },
+  {
+    "id": "l402",
+    "name": "L402",
+    "type": "Project",
+    "description": "L402 mimics familiar browser payment flows using the HTTP 402 Payment Required standard",
+    "website": "https://www.l402.org",
+    "github": "https://github.com/l402-protocol/l402",
+    "community": "https://discord.com/invite/2tPYBgWzQm"
+  },
+  {
+    "id": "lampo",
+    "name": "Lampo",
+    "type": "Project",
+    "description": "An experimental implementation of a tiny lightning node",
+    "website": "https://lampo.devcrew.cc",
+    "github": "https://github.com/vincenzo-palazzo/lampo.rs",
+    "community": "https://discord.com/invite/j2QNJHxh8J"
+  },
+  {
+    "id": "ldk",
+    "name": "LDK",
+    "type": "Project",
+    "description": "A complete Lightning implementation packaged as an SDK",
+    "website": "https://lightningdevkit.org",
+    "github": "https://github.com/lightningdevkit",
+    "community": "https://discord.com/invite/5AcknnMfBw"
+  },
+  {
+    "id": "lnd",
+    "name": "Lightning (LND)",
+    "type": "Project",
+    "description": "Layer 2 payment protocol built on Bitcoin to enable instant, low-cost, off-chain transactions",
+    "website": "https://docs.lightning.engineering",
+    "github": "https://github.com/lightningnetwork/lnd"
+  },
+  {
+    "id": "nostr",
+    "name": "Nostr",
+    "type": "Project",
+    "description": "Notes and Other Stuff Transmitted by Relays — a decentralized, censorship-resistant social protocol",
+    "website": "https://nostr.net",
+    "github": "https://github.com/nostr-protocol/nostr"
+  },
+  {
+    "id": "p2pool",
+    "name": "P2Pool",
+    "type": "Product",
+    "description": "Decentralized Bitcoin mining pool that operates without a central server",
+    "website": "http://p2pool.in",
+    "github": "https://github.com/p2pool/p2pool"
+  },
+  {
+    "id": "saving-satoshi",
+    "name": "Saving Satoshi",
+    "type": "Education",
+    "description": "Light-hearted, interactive role-playing game about bitcoin tech",
+    "website": "https://savingsatoshi.com",
+    "github": "https://github.com/saving-satoshi/saving-satoshi"
+  },
+  {
+    "id": "shopstr",
+    "name": "Shopstr",
+    "type": "Product",
+    "description": "NOSTR based buy sell site",
+    "website": "https://shopstr.store",
+    "github": "https://github.com/shopstr-eng/shopstr"
+  },
+  {
+    "id": "silent-payments",
+    "name": "Silent Payments",
+    "type": "Project",
+    "description": "Silent Payments make receiving Bitcoin easier while preserving privacy",
+    "website": "https://silentpayments.xyz",
+    "github": "https://github.com/sethforprivacy/silentpaymentsxyz",
+    "community": "https://discord.com/invite/BExA2YGsgY"
+  }
+]

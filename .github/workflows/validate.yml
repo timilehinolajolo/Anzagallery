@@ -3,7 +3,7 @@ name: Validate and Deploy
 on:
   pull_request:
     paths:
-      - 'data/issues.json'
+      - 'data/orgs.json'
   push:
     branches:
       - main
@@ -13,16 +13,16 @@ permissions:
 
 jobs:
   validate:
-    name: Validate issues.json
+    name: Validate orgs.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Check JSON syntax
-        run: python -m json.tool data/issues.json > /dev/null
+        run: python -m json.tool data/orgs.json > /dev/null
 
-      - name: Check required fields and unique IDs
-        run: python .github/scripts/validate_issues.py
+      - name: Check required fields, types, and unique IDs
+        run: python .github/scripts/validate_orgs.py
 
   deploy:
     name: Deploy to GitHub Pages
