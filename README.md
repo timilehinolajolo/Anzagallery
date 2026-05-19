@@ -1,7 +1,7 @@
-# SatsIssues
+# Anzagallery
 
-A static, community-maintained gallery of good first issues across Bitcoin open-source projects.
-Browsable by org, filterable by language — powered entirely by a JSON file anyone can PR into.
+A static, community-maintained directory of Bitcoin open-source organizations.
+Filterable by type — powered entirely by a JSON file anyone can PR into.
 
 **Live site:** [nkatha23.github.io/Issuesgallery](https://nkatha23.github.io/Issuesgallery)
 
@@ -9,14 +9,14 @@ Browsable by org, filterable by language — powered entirely by a JSON file any
 
 ## Contributing
 
-The only file you need to edit is `data/issues.json`.
+The only file you need to edit is `data/orgs.json`.
 
 ### Step-by-step
 
 1. **Fork** this repository.
-2. Open `data/issues.json`.
-3. Add your entry using the template below (at the top of the array, so newest issues appear first).
-4. Commit: `git commit -m "feat: add <org> issue #<number>"`
+2. Open `data/orgs.json`.
+3. Add your entry using the template below (entries are displayed alphabetically).
+4. Commit: `git commit -m "feat: add <org name>"`
 5. Open a pull request — CI will validate your entry automatically.
 6. Once merged, the site updates within minutes.
 
@@ -24,49 +24,51 @@ The only file you need to edit is `data/issues.json`.
 
 ```json
 {
-  "id": "org-name-12345",
-  "org": "Org Display Name",
-  "repo": "owner/repo",
-  "logo": "https://avatars.githubusercontent.com/u/GITHUB_ORG_ID",
-  "issue_number": 12345,
-  "title": "Short description of the issue",
-  "url": "https://github.com/owner/repo/issues/12345",
-  "languages": ["Rust"],
-  "tags": ["docs", "testing"],
-  "date_added": "2025-05-19"
+  "id": "org-name",
+  "name": "Org Display Name",
+  "type": "Project",
+  "description": "One or two sentences describing what this organization does.",
+  "website": "https://example.org",
+  "github": "https://github.com/org-name",
+  "community": "https://discord.com/invite/..."
 }
 ```
 
 ### Field reference
 
-| Field          | Required | Notes                                      |
-|----------------|----------|--------------------------------------------|
-| `id`           | Yes      | `org-issue_number`, kebab-case, must be unique |
-| `org`          | Yes      | Display name shown on the card             |
-| `repo`         | Yes      | `owner/repo` format                        |
-| `logo`         | No       | GitHub org avatar URL works well           |
-| `issue_number` | Yes      | Integer, no quotes                         |
-| `title`        | Yes      | Copy the issue title from GitHub           |
-| `url`          | Yes      | Full link to the GitHub issue              |
-| `languages`    | Yes      | Array, e.g. `["Rust", "Python"]`           |
-| `tags`         | No       | Array, e.g. `["docs", "testing", "cli"]`   |
-| `date_added`   | Yes      | `YYYY-MM-DD` format                        |
+| Field         | Required | Notes                                                        |
+|---------------|----------|--------------------------------------------------------------|
+| `id`          | Yes      | Kebab-case, must be unique across all entries                |
+| `name`        | Yes      | Display name shown on the card                               |
+| `type`        | Yes      | One of: `Project`, `Product`, `Education`, `Design`         |
+| `description` | Yes      | One or two sentences                                         |
+| `website`     | No*      | Full URL — at least one of `website` or `github` is required |
+| `github`      | No*      | Full GitHub org or repo URL                                  |
+| `community`   | No       | Discord, Telegram, Slack, or forum link                      |
 
-### Finding issues to add
+\* At least one of `website` or `github` must be present.
 
-Good sources:
-- Search GitHub: `label:"good first issue" language:rust bitcoin`
-- Browse [bitcoin.org](https://bitcoin.org/en/development) contributor resources
-- Follow your favourite Bitcoin repo and watch for newly-labelled issues
+### Type guide
+
+| Type        | When to use                                                  |
+|-------------|--------------------------------------------------------------|
+| `Project`   | Open protocols, libraries, node implementations              |
+| `Product`   | Applications, wallets, payment processors, tools             |
+| `Education` | Courses, games, learning resources, developer programs       |
+| `Design`    | Design systems, UX research, visual resources                |
 
 ---
 
 ## CI / Validation
 
-Every pull request that touches `data/issues.json` runs two checks:
+Every pull request that touches `data/orgs.json` runs two checks automatically:
 
 1. **JSON syntax** — `python -m json.tool` catches malformed JSON immediately.
-2. **Schema validation** — `.github/scripts/validate_issues.py` verifies required fields, unique IDs, and correct types.
+2. **Schema validation** — `.github/scripts/validate_orgs.py` verifies:
+   - All required fields are present.
+   - No duplicate IDs.
+   - `type` is one of the four valid values.
+   - At least one of `website` or `github` is present.
 
 The deploy to GitHub Pages only runs on merge to `main`, after both checks pass.
 
@@ -74,15 +76,20 @@ The deploy to GitHub Pages only runs on merge to `main`, after both checks pass.
 
 ## Running locally
 
-No build step required. Open `index.html` directly in a browser, or serve it with any static file server:
+No build step required. Serve the project root with any static file server:
 
 ```bash
 # Python
-python -m http.server 8000
+python3 -m http.server 8000
 
 # Node
 npx serve .
 ```
+
+Then open **http://localhost:8000** in your browser.
+
+> Opening `index.html` directly as a `file://` URL will not work because the app
+> uses `fetch` to load `data/orgs.json`, which browsers block on `file://`.
 
 ---
 
@@ -91,14 +98,14 @@ npx serve .
 ```
 .
 ├── index.html                        # Single-page app shell
-├── styles.css                        # Indigo + white design system
+├── styles.css                        # Slate + white design system
 ├── js/
 │   └── app.js                        # Filter, search, and render logic
 ├── data/
-│   └── issues.json                   # The community-maintained data file
+│   └── orgs.json                     # The community-maintained data file
 ├── .github/
 │   ├── scripts/
-│   │   └── validate_issues.py        # CI validation script
+│   │   └── validate_orgs.py          # CI validation script
 │   └── workflows/
 │       └── validate.yml              # GitHub Actions: validate + deploy
 └── README.md
