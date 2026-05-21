@@ -78,7 +78,7 @@
   },
   {
     "id": "cln",
-    "name": "CLN",
+    "name": "Core Lightning (CLN)",
     "type": "Project",
     "description": "A highly customizable, lightweight, and performant specification-compliant implementation of the Lightning Network protocol.",
     "website": "https://corelightning.org",
