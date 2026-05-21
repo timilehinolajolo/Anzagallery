@@ -79,9 +79,9 @@
   },
   {
     "id": "cln",
-    "name": "CLN",
+    "name": "Core Lightning (CLN)",
     "type": "Project",
-    "description": "CLN is the first Lightning implementation",
+    "description": "A highly customizable, lightweight, and performant specification-compliant implementation of the Lightning Network protocol.",
     "website": "https://corelightning.org",
     "github": "https://github.com/ElementsProject/lightning",
     "community": "https://discord.gg/w27fMFESMN"
