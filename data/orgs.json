@@ -195,5 +195,14 @@
     "website": "https://silentpayments.xyz",
     "github": "https://github.com/sethforprivacy/silentpaymentsxyz",
     "community": "https://discord.com/invite/BExA2YGsgY"
-  }
+  },
+  {
+  "id": "sparrow",
+  "name": "Sparrow",
+  "type": "Product",
+  "description": "A simple, secure Bitcoin wallet for everyone.",
+  "website": "https://sparrowwallet.com",
+  "github": "https://github.com/sparrowwallet/sparrow",
+  "community": "https://x.com/SparrowWallet"
+}
 ]
